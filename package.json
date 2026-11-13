@@ -1,0 +1,18 @@
+{
+  "name": "modus-signal",
+  "version": "1.0.0",
+  "description": "Модус Сигнал — система обратной связи и предложений сотрудников (MVP для хакатона)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server/server.js",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/acceptance.test.mjs tests/security.test.mjs tests/kb.test.mjs",
+    "start:demo": "node --env-file-if-exists=.env server/server.js",
+    "audit": "npm audit --omit=dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
