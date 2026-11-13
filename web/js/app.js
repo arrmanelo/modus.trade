@@ -231,20 +231,14 @@
     eye: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
   };
   function svg(name) { const s = document.createElement('span'); s.className = 'ico'; s.innerHTML = SVG[name]; return s; }
-  // Левая панель. #login-scene — место для будущей 3D-сцены (логотип Модус). Сейчас — CSS-анимация орбит.
+  // Спокойная информационная панель входа.
   function loginArt() {
     return h('div', { class: 'login-art', 'aria-hidden': 'true' },
       h('div', { class: 'login-brand' }, h('span', { class: 'brand-mark' }, modusLogo()),
         h('span', null, h('b', null, 'МОДУС'), h('i', null, 'ТРЕЙД'))),
-      h('div', { class: 'orbital', id: 'login-scene' },
-        h('div', { class: 'orbit o1' }), h('div', { class: 'orbit o2' }, h('span', { class: 'sat' })), h('div', { class: 'orbit o3' }, h('span', { class: 'sat red' })),
-        h('div', { class: 'core' }, modusLogo()),
-        h('span', { class: 'orbit-chip oc1' }, 'Идея становится действием ', svg('arrowUR')),
-        h('span', { class: 'orbit-chip oc2' }, h('span', { class: 'live-dot' }), 'Каждый голос имеет значение')),
       h('div', { class: 'login-statement' },
-        h('span', { class: 'eyebrow' }, 'ОБРАТНАЯ СВЯЗЬ, КОТОРАЯ РАБОТАЕТ'),
-        h('h1', null, 'Большие перемены', h('br'), 'начинаются ', h('em', null, 'с вас.')),
-        h('p', null, 'Делитесь идеями, сообщайте о проблемах', h('br'), 'и следите, как компания становится лучше.')),
+        h('h1', null, 'Место для', h('br'), 'ваших идей.'),
+        h('p', null, 'Предлагайте улучшения, сообщайте о проблемах и получайте ответ. Всё в одном месте.')),
       h('div', { class: 'art-footer' }, 'ГК «Модус Трейд»', h('span', null, 'Внутренняя платформа')));
   }
   function renderLogin() {
